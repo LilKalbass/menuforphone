@@ -63,7 +63,7 @@ export default function Slider() {
     };
 
     return (
-        <div className="relative items-center w-full h-screen flex flex-col pt-[40%] bg-origin-border bg-no-repea+t bg-[left_36%_top_100%] bg-cover"
+        <div className="transition-all relative items-center w-full h-screen flex flex-col pt-[40%] bg-origin-border bg-no-repea+t bg-[left_36%_top_100%] bg-cover"
              style={{
                  backgroundImage: currentCategory ? `url(${currentCategory.BackgroundImage})` : "",
              }}
@@ -74,7 +74,7 @@ export default function Slider() {
                     {menuData.Menu.map((category) => (
                         <button
                             key={category.Title}
-                            className={`border-b-2 font-secondary text-[22px] transition-all ${activeTab === category.Title.toLowerCase() ? "border-primary font-bold" : "border-transparent "}`}
+                            className={`border-b-2 font-secondary text-[22px] transition-all duration-300 ${activeTab === category.Title.toLowerCase() ? "border-primary font-bold" : "border-transparent hover:border-orange-500  hover:text-orange-500"}`}
                             onClick={() => {
                                 setActiveTab(category.Title.toLowerCase());
                                 setSelectedItem(null);
@@ -92,10 +92,10 @@ export default function Slider() {
                     <div className="flex flex-col gap-y-4">
                         {currentCategory.ListItems.map((item, index) => (
                             <div key={index} className="flex items-center space-x-4 border-b">
-                                <div className='flex items-center justify-between w-full'
+                                <div className='flex items-center justify-between w-full group cursor-pointer'
                                      onClick={() => openPopup(item)}>
                                     <p
-                                        className="font-semibold ml-2 cursor-pointer hover:text-blue-500 transition"
+                                        className="font-semibold ml-2 cursor-pointer transition group-hover:text-primary"
                                     >
                                         {item.ItemName}
                                     </p>
