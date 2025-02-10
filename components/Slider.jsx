@@ -60,18 +60,18 @@ export default function Slider() {
     };
 
     return (
-        <div className="relative w-full h-screen flex flex-col pt-[40%] bg-origin-border bg-no-repeat bg-[left_20%_top_100%] bg-cover"
+        <div className="relative items-center w-full h-screen flex flex-col pt-[40%] bg-origin-border bg-no-repea+t bg-[left_36%_top_100%] bg-cover"
              style={{
                  backgroundImage: currentCategory ? `url(${currentCategory.BackgroundImage})` : "",
              }}
         >
-            <div className="relative z-10 p-4 ml-[16%]">
+            <div className="relative z-10 pt-6 flex flex-col">
                 {/* Кнопки переключения вкладок */}
-                <div className="flex border-b">
+                <div className="flex items-center gap-x-4 justify-center">
                     {menuData.Menu.map((category) => (
                         <button
                             key={category.Title}
-                            className={`p-2 px-4 border-b-2 transition-all ${activeTab === category.Title.toLowerCase() ? "border-blue-500 font-bold" : "border-transparent"}`}
+                            className={`border-b-2 transition-all ${activeTab === category.Title.toLowerCase() ? "border-blue-500 font-bold" : "border-transparent "}`}
                             onClick={() => {
                                 setActiveTab(category.Title.toLowerCase());
                                 setSelectedItem(null);
@@ -82,14 +82,15 @@ export default function Slider() {
                         </button>
                     ))}
                 </div>
-
-                {/* Список товаров */}
+            </div>
+            <div className='w-8/12 flex flex-col'>
                 <p className='flex justify-end font-secondary'>Ціна/Вага</p>
                 {currentCategory && (
                     <div className="flex flex-col gap-y-4">
                         {currentCategory.ListItems.map((item, index) => (
                             <div key={index} className="flex items-center space-x-4 border-b">
-                                <div className='flex items-center justify-between w-full' onClick={() => openPopup(item)}>
+                                <div className='flex items-center justify-between w-full'
+                                     onClick={() => openPopup(item)}>
                                     <p
                                         className="font-semibold ml-2 cursor-pointer hover:text-blue-500 transition"
                                     >
@@ -102,7 +103,6 @@ export default function Slider() {
                     </div>
                 )}
             </div>
-
             {/* Попап с картинкой */}
             {isPopupOpen && selectedItem && (
                 <div
