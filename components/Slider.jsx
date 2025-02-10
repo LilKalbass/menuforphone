@@ -7,18 +7,34 @@ const menuData = {
     Menu: [
         {
             Title: "Чіпси",
-            BackgroundImage: "/assets/bg/chipsBg.webp",
+            BackgroundImage: "/assets/bg/chipsBg.webp",  // Фон для чипсов
             ListItems: [
                 { ItemName: "Банан", ItemImg: "/assets/chips/Banana.webp", ItemPrice: "100", ItemWeight: "50" },
-                { ItemName: "Яблуко", ItemImg: "/assets/chips/Apple.webp", ItemPrice: "120", ItemWeight: "60" }
+                { ItemName: "Банан", ItemImg: "/assets/chips/Banana.webp", ItemPrice: "100", ItemWeight: "50" }
             ]
         },
         {
             Title: "Квіти",
-            BackgroundImage: "/assets/bg/flowerBg.webp",
+            BackgroundImage: "/assets/bg/flowerBg.webp",  // Фон для цветов
             ListItems: [
                 { ItemName: "Лаванда", ItemImg: "/assets/flowers/Lavender.webp", ItemPrice: "50", ItemWeight: "1" },
-                { ItemName: "Роза", ItemImg: "/assets/flowers/Rose.webp", ItemPrice: "80", ItemWeight: "2" }
+                { ItemName: "Лаванда", ItemImg: "/assets/flowers/Lavender.webp", ItemPrice: "50", ItemWeight: "1" },
+            ]
+        },
+        {
+            Title: "Гарніш",
+            BackgroundImage: "/assets/bg/garnishBg.webp",  // Фон для цветов
+            ListItems: [
+                { ItemName: "Лаванда", ItemImg: "/assets/flowers/Lavender.webp", ItemPrice: "50", ItemWeight: "1" },
+                { ItemName: "Лаванда", ItemImg: "/assets/flowers/Lavender.webp", ItemPrice: "50", ItemWeight: "1" },
+            ]
+        },
+        {
+            Title: "Сиропи",
+            BackgroundImage: "/assets/bg/syropBg.webp",  // Фон для цветов
+            ListItems: [
+                { ItemName: "Лаванда", ItemImg: "/assets/flowers/Lavender.webp", ItemPrice: "50", ItemWeight: "1" },
+                { ItemName: "Лаванда", ItemImg: "/assets/flowers/Lavender.webp", ItemPrice: "50", ItemWeight: "1" },
             ]
         }
     ]
