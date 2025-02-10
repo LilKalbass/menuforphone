@@ -60,7 +60,7 @@ export default function Slider() {
     };
 
     return (
-        <div className="relative w-full h-screen flex flex-col pt-[40%] bg-origin-border bg-no-repeat bg-[left_20%_top_100%]"
+        <div className="relative w-full h-screen flex flex-col pt-[40%] bg-origin-border bg-no-repeat bg-[left_20%_top_100%] bg-cover"
              style={{
                  backgroundImage: currentCategory ? `url(${currentCategory.BackgroundImage})` : "",
              }}
