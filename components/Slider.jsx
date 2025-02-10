@@ -14,7 +14,7 @@ export default function Slider() {
     };
 
     return (
-        <div className={`relative w-full h-screen flex flex-col pt-[36%] ${backgroundImages[activeTab]} bg-contain bg-center`}>
+        <div className={`relative w-full h-screen flex flex-col pt-[36%] ${backgroundImages[activeTab]} bg-left-top bg-origin-border bg-no-repeat bg-cover`}>
             {/* Это фон, который будет перекрывать весь экран */}
             <div className="relative z-10 p-4">
                 {/* Кнопки-переключатели */}
