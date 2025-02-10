@@ -74,7 +74,7 @@ export default function Slider() {
                     {menuData.Menu.map((category) => (
                         <button
                             key={category.Title}
-                            className={`border-b-2 font-secondary text-xl transition-all ${activeTab === category.Title.toLowerCase() ? "border-primary font-bold" : "border-transparent "}`}
+                            className={`border-b-2 font-secondary text-[22px] transition-all ${activeTab === category.Title.toLowerCase() ? "border-primary font-bold" : "border-transparent "}`}
                             onClick={() => {
                                 setActiveTab(category.Title.toLowerCase());
                                 setSelectedItem(null);
