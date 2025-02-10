@@ -27,7 +27,7 @@ export default {
     },
     extend: {
       colors: {
-
+        primary: "#005263"
       },
       backgroundImage: {
         chips: 'url(/assets/bg/chipsBg.webp)',

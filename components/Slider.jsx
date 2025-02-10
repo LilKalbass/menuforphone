@@ -1,6 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import {FaWindowClose} from "react-icons/fa";
+import {CloseIcon} from "next/dist/client/components/react-dev-overlay/internal/icons/CloseIcon";
+import {CgClose} from "react-icons/cg";
 
 // Пример данных
 const menuData = {
@@ -71,7 +74,7 @@ export default function Slider() {
                     {menuData.Menu.map((category) => (
                         <button
                             key={category.Title}
-                            className={`border-b-2 transition-all ${activeTab === category.Title.toLowerCase() ? "border-blue-500 font-bold" : "border-transparent "}`}
+                            className={`border-b-2 font-secondary text-xl transition-all ${activeTab === category.Title.toLowerCase() ? "border-primary font-bold" : "border-transparent "}`}
                             onClick={() => {
                                 setActiveTab(category.Title.toLowerCase());
                                 setSelectedItem(null);
@@ -112,10 +115,10 @@ export default function Slider() {
                     <div className="relative bg-white p-4 rounded-lg shadow-lg" onClick={(e) => e.stopPropagation()}>
                         {/* Кнопка закрытия */}
                         <button
-                            className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-2xl"
+                            className="absolute top-0 right-1 text-primary hover:text-gray-800"
                             onClick={closePopup}
                         >
-                            ❌
+                            <CgClose className='text-4xl'/>
                         </button>
                         {/* Картинка */}
                         <img
