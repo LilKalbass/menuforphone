@@ -6,11 +6,35 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '20px',
+      },
+    },
+    screens: {
+      ph: '360px',
+      pl: '500px',
+      sm: '640px',
+      tb: '768px',
+      md: '1024px',
+      lg: '1200px',
+      xl: '1468px'
+    },
+    fontFamily: {
+      primary: 'var(--font-open-sans)',
+      secondary: 'var(--font-caveat)'
+    },
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+
       },
+      backgroundImage: {
+        chips: 'url(/assets/bg/chipsBg.webp)',
+        flowers: 'url(/assets/bg/flowerBg.webp)',
+        garnish: 'url(/assets/bg/garnishBg.webp)',
+        syrops: 'url(/assets/bg/syropBg.webp)'
+      }
     },
   },
   plugins: [],
