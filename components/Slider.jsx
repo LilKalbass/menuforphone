@@ -1,32 +1,43 @@
 "use client";
 
 import { useState } from "react";
-import {FaWindowClose} from "react-icons/fa";
-import {CloseIcon} from "next/dist/client/components/react-dev-overlay/internal/icons/CloseIcon";
 import {CgClose} from "react-icons/cg";
+import {motion, AnimatePresence} from "framer-motion";
+import {fadeIn} from "@/variants";
 
-// Пример данных
 const menuData = {
     Menu: [
         {
             Title: "Чіпси",
-            BackgroundImage: "/assets/bg/chipsBg.webp",  // Фон для чипсов
+            BackgroundImage: "/assets/bg/chipsBg.webp",
             ListItems: [
-                { ItemName: "Банан", ItemImg: "/assets/chips/Banana.webp", ItemPrice: "100", ItemWeight: "50" },
-                { ItemName: "Банан", ItemImg: "/assets/chips/Banana.webp", ItemPrice: "100", ItemWeight: "50" }
+                { ItemName: "Банан", ItemImg: "/assets/chips/Banana.webp", ItemPrice: "210", ItemWeight: "100" },
+                { ItemName: "Кокос", ItemImg: "/assets/chips/Coconut.webp", ItemPrice: "150", ItemWeight: "100" },
+                { ItemName: "Імбир", ItemImg: "/assets/chips/Ginger.webp", ItemPrice: "145", ItemWeight: "50" },
+                { ItemName: "Лайм", ItemImg: "/assets/chips/Lime.webp", ItemPrice: "220", ItemWeight: "100" },
+                { ItemName: "Манго", ItemImg: "/assets/chips/Mango.webp", ItemPrice: "200", ItemWeight: "50" },
+                { ItemName: "Апельсин", ItemImg: "/assets/chips/Orange.webp", ItemPrice: "150", ItemWeight: "100" },
+                { ItemName: "Персик", ItemImg: "/assets/chips/Peach.webp", ItemPrice: "150", ItemWeight: "50" },
+                { ItemName: "Груша", ItemImg: "/assets/chips/Pear.webp", ItemPrice: "240", ItemWeight: "100" },
+                { ItemName: "Ананас", ItemImg: "/assets/chips/Pineapple.webp", ItemPrice: "240", ItemWeight: "100" },
+                { ItemName: "Полуниця", ItemImg: "/assets/chips/Strawberry.webp", ItemPrice: "190", ItemWeight: "50" },
             ]
         },
         {
             Title: "Квіти",
-            BackgroundImage: "/assets/bg/flowerBg.webp",  // Фон для цветов
+            BackgroundImage: "/assets/bg/flowerBg.webp",
             ListItems: [
-                { ItemName: "Лаванда", ItemImg: "/assets/flowers/Lavender.webp", ItemPrice: "50", ItemWeight: "1" },
-                { ItemName: "Лаванда", ItemImg: "/assets/flowers/Lavender.webp", ItemPrice: "50", ItemWeight: "1" },
+                { ItemName: "Лаванда", ItemImg: "/assets/flowers/Lavender.webp", ItemPrice: "150", ItemWeight: "100ш." },
+                { ItemName: "Геліхрізум", ItemImg: "/assets/flowers/Helichrysum.webp", ItemPrice: "150", ItemWeight: "50ш." },
+                { ItemName: "Гіпсофіла", ItemImg: "/assets/flowers/Gypsophila.webp", ItemPrice: "110", ItemWeight: "1ш." },
+                { ItemName: "Гортензія", ItemImg: "/assets/flowers/Hydrangea.webp", ItemPrice: "150", ItemWeight: "1ш." },
+                { ItemName: "Гомфрена", ItemImg: "/assets/flowers/Gomphrena.webp", ItemPrice: "70", ItemWeight: "30ш." },
+                { ItemName: "Бамбук", ItemImg: "/assets/flowers/Bamboo.webp", ItemPrice: "150", ItemWeight: "50ш." }
             ]
         },
         {
             Title: "Гарніш",
-            BackgroundImage: "/assets/bg/garnishBg.webp",  // Фон для цветов
+            BackgroundImage: "/assets/bg/garnishBg.webp",
             ListItems: [
                 { ItemName: "Лаванда", ItemImg: "/assets/flowers/Lavender.webp", ItemPrice: "50", ItemWeight: "1" },
                 { ItemName: "Лаванда", ItemImg: "/assets/flowers/Lavender.webp", ItemPrice: "50", ItemWeight: "1" },
@@ -34,7 +45,7 @@ const menuData = {
         },
         {
             Title: "Сиропи",
-            BackgroundImage: "/assets/bg/syropBg.webp",  // Фон для цветов
+            BackgroundImage: "/assets/bg/syropBg.webp",
             ListItems: [
                 { ItemName: "Лаванда", ItemImg: "/assets/flowers/Lavender.webp", ItemPrice: "50", ItemWeight: "1" },
                 { ItemName: "Лаванда", ItemImg: "/assets/flowers/Lavender.webp", ItemPrice: "50", ItemWeight: "1" },
@@ -74,7 +85,7 @@ export default function Slider() {
                     {menuData.Menu.map((category) => (
                         <button
                             key={category.Title}
-                            className={`border-b-2 font-secondary text-[22px] transition-all duration-300 ${activeTab === category.Title.toLowerCase() ? "border-primary font-bold" : "border-transparent hover:border-orange-500  hover:text-orange-500"}`}
+                            className={`border-b-2 font-secondary text-[22px] transition-all duration-300 ${activeTab === category.Title.toLowerCase() ? "border-primary font-bold text-primary" : "border-transparent hover:border-orange-500  hover:text-orange-500 text-secondary"}`}
                             onClick={() => {
                                 setActiveTab(category.Title.toLowerCase());
                                 setSelectedItem(null);
@@ -88,14 +99,22 @@ export default function Slider() {
             </div>
             <div className='w-8/12 flex flex-col'>
                 <p className='flex justify-end font-secondary'>Ціна/Вага</p>
+                <AnimatePresence mode='wait'>
                 {currentCategory && (
-                    <div className="flex flex-col gap-y-4">
+                    <motion.div className="flex flex-col gap-y-3 transition-all"
+                                variants={fadeIn('right', 0)}
+                                initial = 'hidden'
+                                animate='show'
+                                exit='exit'
+                                viewport = {{once: true}}
+                                key={activeTab}
+                    >
                         {currentCategory.ListItems.map((item, index) => (
-                            <div key={index} className="flex items-center space-x-4 border-b">
+                            <div key={index} className="flex items-center space-x-4 border-b border-underlinec">
                                 <div className='flex items-center justify-between w-full group cursor-pointer'
                                      onClick={() => openPopup(item)}>
                                     <p
-                                        className="font-semibold ml-2 cursor-pointer transition group-hover:text-primary"
+                                        className="font-semibold text-[16px] ml-2 cursor-pointer transition group-hover:text-primary"
                                     >
                                         {item.ItemName}
                                     </p>
@@ -103,8 +122,9 @@ export default function Slider() {
                                 </div>
                             </div>
                         ))}
-                    </div>
+                    </motion.div>
                 )}
+                </AnimatePresence>
             </div>
             {/* Попап с картинкой */}
             {isPopupOpen && selectedItem && (

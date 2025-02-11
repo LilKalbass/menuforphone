@@ -17,7 +17,7 @@ export const Header = () => {
                         alt="logo_img"
                         className="object-contain"
                     />
-                    <h2 className="text-4xl text-primary">Прайс Лист</h2>
+                    <h2 className="text-3xl text-primary">Прайс Лист</h2>
                 </div>
             </div>
         </header>
