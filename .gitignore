@@ -17,6 +17,8 @@
 /.next/
 .idea
 /out/
+.gitignore
+package-lock.json
 
 # production
 /build

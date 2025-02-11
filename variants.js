@@ -13,7 +13,7 @@ export const fadeIn = (direction, delay) => {
                 type: 'tween',
                 duration: 0.3,
                 delay: delay,
-                ease: [0.25, 0.75, 0.5, 1],
+                ease: [0.42, 0, 0.58, 1], // A smoother easing function
             },
         },
         exit: {
@@ -23,7 +23,7 @@ export const fadeIn = (direction, delay) => {
             transition: {
                 type: 'tween',
                 duration: 0.6,
-                ease: [0.22, 1, 0.36, 1],
+                ease: [0.42, 0, 0.58, 1], // Same smooth easing as for showing
             },
         }
     };
