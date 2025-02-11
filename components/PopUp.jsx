@@ -28,6 +28,7 @@ export const ItemPopup = ({ item, closePopup }) => {
                         alt={item.ItemName}
                         width={256}
                         height={256}
+                        loading='lazy'
                         className="object-cover rounded-md"
                     />
                     <p className="font-semibold text-lg">{item.ItemName}</p>

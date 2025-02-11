@@ -13,7 +13,7 @@ export const Header = () => {
                         }}
                         width={100}
                         height={100}
-                        priority={true}
+                        priority
                         alt="logo_img"
                         className="object-contain"
                     />
