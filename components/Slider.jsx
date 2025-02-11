@@ -1,9 +1,57 @@
 "use client";
 
-import { useState } from "react";
 import {CgClose} from "react-icons/cg";
+import Image from "next/image";
 import {motion, AnimatePresence} from "framer-motion";
 import {fadeIn} from "@/variants";
+import { useEffect, useState } from "react";
+
+const LazyBackground = ({ bgImage, children, className }) => {
+    const [isIntersecting, setIsIntersecting] = useState(false);
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            setIsIntersecting(true);
+                            observer.disconnect();
+                        }
+                    });
+                },
+                { threshold: 0.1 }
+            );
+
+            const element = document.getElementById('lazy-background');
+            if (element) {
+                observer.observe(element);
+            }
+
+            return () => {
+                if (observer) {
+                    observer.disconnect();
+                }
+            };
+        }
+    }, []);
+
+    return (
+        <div
+            id="lazy-background"
+            className={className}
+            style={{
+                backgroundImage: isIntersecting ? `url(${bgImage})` : 'none',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                minHeight: '100vh',
+            }}
+        >
+            {children}
+        </div>
+    );
+};
+
 
 const menuData = {
     Menu: [
@@ -53,7 +101,6 @@ const menuData = {
         }
     ]
 };
-
 export default function Slider() {
     const [activeTab, setActiveTab] = useState(menuData.Menu[0].Title.toLowerCase());
     const [selectedItem, setSelectedItem] = useState(null);
@@ -74,13 +121,8 @@ export default function Slider() {
     };
 
     return (
-        <div className="transition-all relative items-center w-full h-screen flex flex-col pt-[40%] bg-origin-border bg-no-repea+t bg-[left_36%_top_100%] bg-cover"
-             style={{
-                 backgroundImage: currentCategory ? `url(${currentCategory.BackgroundImage})` : "",
-             }}
-        >
+        <LazyBackground bgImage={currentCategory?.BackgroundImage} className="transition-all relative items-center w-full h-screen flex flex-col pt-[40%] bg-origin-border bg-no-repeat bg-[left_36%_top_100%] bg-cover">
             <div className="relative z-10 pt-6 flex flex-col">
-                {/* Кнопки переключения вкладок */}
                 <div className="flex items-center gap-x-4 justify-center">
                     {menuData.Menu.map((category) => (
                         <button
@@ -100,55 +142,54 @@ export default function Slider() {
             <div className='w-8/12 flex flex-col'>
                 <p className='flex justify-end font-secondary'>Ціна/Вага</p>
                 <AnimatePresence mode='wait'>
-                {currentCategory && (
-                    <motion.div className="flex flex-col gap-y-3 transition-all"
-                                variants={fadeIn('right', 0)}
-                                initial = 'hidden'
-                                animate='show'
-                                whileInView = {'show'}
-                                viewport = {{once: false, amount: 0.1}}
-                                key={activeTab}
-                    >
-                        {currentCategory.ListItems.map((item, index) => (
-                            <div key={index} className="flex items-center space-x-4 border-b border-underlinec">
-                                <div className='flex items-center justify-between w-full group cursor-pointer'
-                                     onClick={() => openPopup(item)}>
-                                    <p
-                                        className="font-semibold text-[16px] ml-2 cursor-pointer transition group-hover:text-primary"
-                                    >
-                                        {item.ItemName}
-                                    </p>
-                                    <p className='font-secondary font-bold'>{item.ItemPrice}/{item.ItemWeight}</p>
+                    {currentCategory && (
+                        <motion.div className="flex flex-col gap-y-3 transition-all"
+                                    variants={fadeIn('right', 0)}
+                                    initial='hidden'
+                                    animate='show'
+                                    whileInView={'show'}
+                                    viewport={{once: false, amount: 0.1}}
+                                    key={activeTab}
+                        >
+                            {currentCategory.ListItems.map((item, index) => (
+                                <div key={index} className="flex items-center space-x-4 border-b border-underlinec">
+                                    <div className='flex items-center justify-between w-full group cursor-pointer'
+                                         onClick={() => openPopup(item)}>
+                                        <p
+                                            className="font-semibold text-[16px] ml-2 cursor-pointer transition group-hover:text-primary"
+                                        >
+                                            {item.ItemName}
+                                        </p>
+                                        <p className='font-secondary font-bold'>{item.ItemPrice}/{item.ItemWeight}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
-                    </motion.div>
-                )}
+                            ))}
+                        </motion.div>
+                    )}
                 </AnimatePresence>
             </div>
-            {/* Попап с картинкой */}
             {isPopupOpen && selectedItem && (
                 <div
                     className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
                     onClick={closePopup}
                 >
                     <div className="relative bg-white p-4 rounded-lg shadow-lg" onClick={(e) => e.stopPropagation()}>
-                        {/* Кнопка закрытия */}
                         <button
                             className="absolute top-0 right-1 text-primary hover:text-gray-800"
                             onClick={closePopup}
                         >
                             <CgClose className='text-4xl'/>
                         </button>
-                        {/* Картинка */}
-                        <img
+                        <Image
                             src={selectedItem.ItemImg}
                             alt={selectedItem.ItemName}
-                            className="w-64 h-64 object-cover rounded-md"
+                            width={256}
+                            height={256}
+                            className="object-cover rounded-md"
                         />
                     </div>
                 </div>
             )}
-        </div>
+        </LazyBackground>
     );
 }
