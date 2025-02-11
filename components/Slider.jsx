@@ -4,7 +4,7 @@ import { useState } from "react";
 import { menuData } from "/public/data";
 import { LazyBackground } from "@/components/LazyBack";
 import { motion, AnimatePresence } from "framer-motion";
-import { fadeIn } from "@/variants";
+import { fadeIn } from "@/public/variants";
 import {ItemPopup} from "@/components/PopUp";
 
 export default function Slider() {
