@@ -105,8 +105,8 @@ export default function Slider() {
                                 variants={fadeIn('right', 0)}
                                 initial = 'hidden'
                                 animate='show'
-                                exit='exit'
-                                viewport = {{once: true}}
+                                whileInView = {'show'}
+                                viewport = {{once: false, amount: 0.1}}
                                 key={activeTab}
                     >
                         {currentCategory.ListItems.map((item, index) => (
