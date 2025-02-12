@@ -18,6 +18,14 @@ export default function Slider() {
         });
     }, []);
 
+    const isValidItem = (item) => {
+        const isEmptyName = !item.ItemName || item.ItemName.trim().replace(/[-_\s]/g, "").length === 0;
+        const isEmptyPriceAndWeight = !item.ItemPrice && !item.ItemWeight;
+
+        return !(isEmptyName || isEmptyPriceAndWeight);
+    };
+
+
     const currentCategory = menuData.Menu.find(
         (category) => category.Title.toLowerCase() === activeTab
     );
@@ -60,12 +68,20 @@ export default function Slider() {
                                 <div key={index} className="flex items-center space-x-4 border-b border-underlinec">
                                     <div
                                         className="flex items-center justify-between w-full group cursor-pointer"
-                                        onClick={() => setSelectedItem(item)}
+                                        onClick={() => {
+                                            if (isValidItem(item)) {
+                                                setSelectedItem(item);
+                                            }
+                                        }}
                                     >
                                         <p className="font-primary italic text-[16px] ml-1 cursor-pointer transition group-hover:text-primary">
                                             {item.ItemName}
                                         </p>
-                                        <p className="font-odd">{item.ItemPrice}/{item.ItemWeight}</p>
+                                        {(item.ItemPrice || item.ItemWeight) && (
+                                            <p className="font-odd">
+                                                {item.ItemPrice}{item.ItemPrice && item.ItemWeight && "/"}{item.ItemWeight}
+                                            </p>
+                                        )}
                                     </div>
                                 </div>
                             ))}

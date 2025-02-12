@@ -25,7 +25,6 @@ export const menuData = {
                 { ItemName: "Гіпсофіла", ItemImg: "/assets/flowers/Gypsophila.webp", ItemPrice: "110", ItemWeight: "1ш." },
                 { ItemName: "Гортензія", ItemImg: "/assets/flowers/Hydrangea.webp", ItemPrice: "150", ItemWeight: "1ш." },
                 { ItemName: "Гомфрена", ItemImg: "/assets/flowers/Gomphrena.webp", ItemPrice: "70", ItemWeight: "30ш." },
-                { ItemName: "Бамбук", ItemImg: "/assets/flowers/Bamboo.webp", ItemPrice: "150", ItemWeight: "50ш." },
                 { ItemName: "Чайна Роза", ItemImg: "/assets/flowers/TeeRose.webp", ItemPrice: "100", ItemWeight: "30ш." }
             ]
         },
@@ -33,16 +32,21 @@ export const menuData = {
             Title: "Гарніш",
             BackgroundImage: "/assets/bg/garnishBg.webp",
             ListItems: [
-                { ItemName: "Лаванда", ItemImg: "/assets/flowers/Lavender.webp", ItemPrice: "50", ItemWeight: "1" },
-                { ItemName: "Лаванда", ItemImg: "/assets/flowers/Lavender.webp", ItemPrice: "50", ItemWeight: "1" },
+                { ItemName: "Прищіпки", ItemImg: "/assets/garnish/Clothespins.webp", ItemPrice: "50", ItemWeight: "1" },
+                { ItemName: "Вишня Амарена", ItemImg: "/assets/garnish/CherryAmr.webp", ItemPrice: "50", ItemWeight: "1" },
+                { ItemName: "Бамбук", ItemImg: "/assets/garnish/Bamboo.webp", ItemPrice: "150", ItemWeight: "50" },
+                { ItemName: "Шпажки", ItemImg: "/assets/garnish/Skewers.webp", ItemPrice: "150", ItemWeight: "50" },
+                { ItemName: "Піна Мрія", ItemImg: "/assets/garnish/DreamFoam.webp", ItemPrice: "150", ItemWeight: "50" },
+                { ItemName: "Перлина Кондитерська", ItemImg: "/assets/garnish/PerlCond.webp", ItemPrice: "150", ItemWeight: "50" },
+                { ItemName: "Пудра Малинова", ItemImg: "/assets/garnish/PydraMalin.webp", ItemPrice: "150", ItemWeight: "50" }
             ]
         },
         {
             Title: "Сиропи",
             BackgroundImage: "/assets/bg/syropBg.webp",
             ListItems: [
-                { ItemName: "Лаванда", ItemImg: "/assets/flowers/Lavender.webp", ItemPrice: "50", ItemWeight: "1" },
-                { ItemName: "Лаванда", ItemImg: "/assets/flowers/Lavender.webp", ItemPrice: "50", ItemWeight: "1" },
+                { ItemName: "-----", ItemImg: "/assets/flowers/Lavender.webp", ItemPrice: "", ItemWeight: "" },
+                { ItemName: "-----", ItemImg: "/assets/flowers/Lavender.webp", ItemPrice: "", ItemWeight: "" },
             ]
         }
     ]
