@@ -22,7 +22,8 @@ const exo = Exo_2({
 
 export const metadata = {
   title: "DreamMenu",
-  description: "Price list for DreamShop",
+  description: "Прайс Лист для ознайомлення з актуальними цінами в режимі реального часу.",
+  lang: "uk"
 };
 
 export default function RootLayout({ children }) {

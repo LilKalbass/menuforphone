@@ -2,13 +2,15 @@ import { CgClose } from "react-icons/cg";
 import Image from "next/image";
 import { useState } from "react";
 
-export const ItemPopup = ({ item, closePopup }) => {
+export const ItemPopup = ({ item, closePopup, categoryTitle }) => {
     const [isOpen, setIsOpen] = useState(true);
 
     const closeLocalPopup = () => {
         setIsOpen(false);
         closePopup();
     };
+
+    const isSyropCategory = categoryTitle.toLowerCase() === "сиропи";
 
     return (
         isOpen && (
@@ -23,16 +25,20 @@ export const ItemPopup = ({ item, closePopup }) => {
                     >
                         <CgClose className="text-4xl" />
                     </button>
-                    <Image
-                        src={item.ItemImg}
-                        alt={item.ItemName}
-                        width={256}
-                        height={256}
-                        loading='lazy'
-                        className="object-cover rounded-md"
-                    />
+
+                    {!isSyropCategory && (
+                        <Image
+                            src={item.ItemImg}
+                            alt={item.ItemName}
+                            width={256}
+                            height={256}
+                            loading='lazy'
+                            className="object-cover rounded-md"
+                        />
+                    )}
+
                     <p className="font-semibold text-lg">{item.ItemName}</p>
-                    <p className='font-odd'>{item.ItemPrice}/{item.ItemWeight}</p>
+                    <p className='font-odd'>{item.ItemPrice}{item.ItemPrice && item.ItemWeight && "/"}{item.ItemWeight}</p>
                 </div>
             </div>
         )

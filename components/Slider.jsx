@@ -89,7 +89,14 @@ export default function Slider() {
                     )}
                 </AnimatePresence>
             </div>
-            {selectedItem && <ItemPopup item={selectedItem} closePopup={() => setSelectedItem(null)} />}
+            {selectedItem && (
+                <ItemPopup
+                    item={selectedItem}
+                    closePopup={() => setSelectedItem(null)}
+                    categoryTitle={activeTab}
+                />
+            )}
+
         </LazyBackground>
     );
 }
