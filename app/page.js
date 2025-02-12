@@ -35,7 +35,7 @@ export default function Home() {
 
     if (!isTelegramWebApp) {
         return (
-            <p className="flex h-screen items-center justify-center text-lg font-bold text-center px-2">
+            <p className="flex h-screen items-center justify-center text-lg font-bold text-center px-2 text-white">
                 Пожалуйста, откройте в Telegram WebApp
             </p>
         );
