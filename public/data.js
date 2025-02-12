@@ -45,8 +45,8 @@ export const menuData = {
             Title: "Сиропи",
             BackgroundImage: "/assets/bg/syropBg.webp",
             ListItems: [
-                { ItemName: "-----", ItemImg: "/assets/flowers/Lavender.webp", ItemPrice: "", ItemWeight: "" },
-                { ItemName: "-----", ItemImg: "/assets/flowers/Lavender.webp", ItemPrice: "", ItemWeight: "" },
+                { ItemName: "-----", ItemImg: "/assets/syrops/Lavender.webp", ItemPrice: "", ItemWeight: "" },
+                { ItemName: "-----", ItemImg: "/assets/syrops/Lavender.webp", ItemPrice: "", ItemWeight: "" },
             ]
         }
     ]
