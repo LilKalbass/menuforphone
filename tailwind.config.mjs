@@ -22,8 +22,9 @@ export default {
       xl: '1468px'
     },
     fontFamily: {
-      primary: 'var(--font-open-sans)',
-      secondary: 'var(--font-caveat)'
+      primary: 'var(--font-pt-serif)',
+      secondary: 'var(--font-forum)',
+      odd: 'var(--font-exo)'
     },
     extend: {
       colors: {

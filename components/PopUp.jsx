@@ -32,7 +32,7 @@ export const ItemPopup = ({ item, closePopup }) => {
                         className="object-cover rounded-md"
                     />
                     <p className="font-semibold text-lg">{item.ItemName}</p>
-                    <p>{item.ItemPrice}/{item.ItemWeight}</p>
+                    <p className='font-odd'>{item.ItemPrice}/{item.ItemWeight}</p>
                 </div>
             </div>
         )

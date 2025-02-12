@@ -25,7 +25,8 @@ export const menuData = {
                 { ItemName: "Гіпсофіла", ItemImg: "/assets/flowers/Gypsophila.webp", ItemPrice: "110", ItemWeight: "1ш." },
                 { ItemName: "Гортензія", ItemImg: "/assets/flowers/Hydrangea.webp", ItemPrice: "150", ItemWeight: "1ш." },
                 { ItemName: "Гомфрена", ItemImg: "/assets/flowers/Gomphrena.webp", ItemPrice: "70", ItemWeight: "30ш." },
-                { ItemName: "Бамбук", ItemImg: "/assets/flowers/Bamboo.webp", ItemPrice: "150", ItemWeight: "50ш." }
+                { ItemName: "Бамбук", ItemImg: "/assets/flowers/Bamboo.webp", ItemPrice: "150", ItemWeight: "50ш." },
+                { ItemName: "Чайна Роза", ItemImg: "/assets/flowers/TeeRose.webp", ItemPrice: "100", ItemWeight: "30ш." }
             ]
         },
         {

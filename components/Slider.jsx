@@ -22,7 +22,7 @@ export default function Slider() {
                     {menuData.Menu.map((category) => (
                         <button
                             key={category.Title}
-                            className={`border-b-2 font-secondary text-[22px] transition-all duration-300 ${activeTab === category.Title.toLowerCase() ? "border-primary font-bold text-primary" : "border-transparent hover:border-orange-500  hover:text-orange-500 text-secondary"}`}
+                            className={`border-b-2 font-secondary text-[18px] transition-all duration-300 ${activeTab === category.Title.toLowerCase() ? "border-primary font-bold text-primary" : "border-transparent hover:border-orange-500  hover:text-orange-500 text-secondary"}`}
                             onClick={() => {
                                 setActiveTab(category.Title.toLowerCase());
                                 setSelectedItem(null);
@@ -34,7 +34,9 @@ export default function Slider() {
                 </div>
             </div>
             <div className='w-8/12 flex flex-col'>
-                <p className='flex justify-end font-secondary'>Ціна/Вага</p>
+                <p className='flex justify-end text-[14px] py-1'>
+                    Ціна/Вага
+                </p>
                 <AnimatePresence mode='wait'>
                     {currentCategory && (
                         <motion.div className="flex flex-col gap-y-3 transition-all"
@@ -50,10 +52,10 @@ export default function Slider() {
                                     <div className='flex items-center justify-between w-full group cursor-pointer'
                                          onClick={() => setSelectedItem(item)}
                                     >
-                                        <p className="font-semibold text-[16px] ml-2 cursor-pointer transition group-hover:text-primary">
+                                        <p className="font-primary italic text-[16px] ml-2 cursor-pointer transition group-hover:text-primary">
                                             {item.ItemName}
                                         </p>
-                                        <p className='font-secondary font-bold'>{item.ItemPrice}/{item.ItemWeight}</p>
+                                        <p className='font-odd'>{item.ItemPrice}/{item.ItemWeight}</p>
                                     </div>
                                 </div>
                             ))}
