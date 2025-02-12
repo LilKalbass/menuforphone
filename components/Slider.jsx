@@ -11,7 +11,6 @@ export default function Slider() {
     const [activeTab, setActiveTab] = useState(menuData.Menu[0].Title.toLowerCase());
     const [selectedItem, setSelectedItem] = useState(null);
 
-    // Предзагрузка изображений в кэш
     useEffect(() => {
         menuData.Menu.forEach((category) => {
             const img = new Image();
