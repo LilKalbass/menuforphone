@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Slider from "../components/Slider";
+import {Header} from "../components/Header";
+import {Footer} from "../components/Footer";
 
 export default function Home() {
     const [isTelegramWebApp, setIsTelegramWebApp] = useState(false);
@@ -16,14 +18,18 @@ export default function Home() {
     if (!isTelegramWebApp) {
         return (
             <p className="flex h-screen items-center justify-center text-lg font-bold text-center px-2">
-                Пожалуйста, откройте приложение в Telegram WebApp
+                Будь ласка, відкрийте в <br/> Telegram WebApp
             </p>
         );
     }
 
     return (
-        <main className="h-screen">
-            <Slider />
-        </main>
+        <>
+            <Header/>
+            <main className="h-screen">
+                <Slider />
+            </main>
+            <Footer/>
+        </>
     );
 }
