@@ -52,7 +52,7 @@ export default function Slider() {
                                     <div className='flex items-center justify-between w-full group cursor-pointer'
                                          onClick={() => setSelectedItem(item)}
                                     >
-                                        <p className="font-primary italic text-[16px] ml-2 cursor-pointer transition group-hover:text-primary">
+                                        <p className="font-primary italic text-[16px] ml-1 cursor-pointer transition group-hover:text-primary">
                                             {item.ItemName}
                                         </p>
                                         <p className='font-odd'>{item.ItemPrice}/{item.ItemWeight}</p>
