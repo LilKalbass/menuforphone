@@ -1,6 +1,10 @@
+"use client";
+
+
 import Image from "next/image";
 
 export const Header = () => {
+
     return (
         <header className="flex flex-col absolute inset-0">
             <div className="container mx-auto h-full flex items-start justify-center">
