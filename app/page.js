@@ -7,7 +7,7 @@ import Head from "next/head";
 export default function Home() {
     useEffect(() => {
         // Проверка, что объект Telegram WebApp доступен
-        if (typeof window !== "undefined" && window.Telegram?.WebApp) {
+        if (window.Telegram && window.Telegram.WebApp) {
             window.Telegram.WebApp.init();
         }
     }, []);
