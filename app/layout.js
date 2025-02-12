@@ -2,6 +2,8 @@ import {PT_Serif, Forum, Exo_2 } from "next/font/google";
 import "./globals.css";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
+import Head from "next/head";
+import Script from "next/script";
 
 const ptSerif = PT_Serif({
   variable: "--font-pt-serif",
@@ -29,6 +31,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+    <Head>
+      <Script
+          async
+          type="text/javascript"
+          src="https://telegram.org/js/telegram-web-app.js"
+      ></Script>
+    </Head>
       <body
         className={`${ptSerif.variable} ${forum.variable} ${exo.variable} antialiased transition-all`}
       >
