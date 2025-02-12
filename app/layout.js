@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${ptSerif.variable} ${forum.variable} ${exo.variable} antialiased`}
+        className={`${ptSerif.variable} ${forum.variable} ${exo.variable} antialiased transition-all`}
       >
         <Header/>
         {children}
