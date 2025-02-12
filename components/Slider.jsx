@@ -12,12 +12,6 @@ export default function Slider() {
     const [selectedItem, setSelectedItem] = useState(null);
 
     useEffect(() => {
-        if (typeof window !== "undefined" && window.Telegram?.WebApp) {
-            window.Telegram.WebApp.init();
-        }
-    }, []);
-
-    useEffect(() => {
         menuData.Menu.forEach((category) => {
             const img = new Image();
             img.src = category.BackgroundImage;

@@ -1,15 +1,6 @@
-'use client'
-
-
 import Image from "next/image";
-import {useEffect} from "react";
 
 export const Header = () => {
-    useEffect(() => {
-        if (typeof window !== "undefined" && window.Telegram?.WebApp) {
-            window.Telegram.WebApp.init();
-        }
-    }, []);
     return (
         <header className="flex flex-col absolute inset-0">
             <div className="container mx-auto h-full flex items-start justify-center">
