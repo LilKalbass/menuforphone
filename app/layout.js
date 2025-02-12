@@ -3,6 +3,7 @@ import "./globals.css";
 import {Header} from "../components/Header";
 import {Footer} from "../components/Footer";
 import Script from "next/script";
+import Head from "next/head";
 
 const ptSerif = PT_Serif({
   variable: "--font-pt-serif",
@@ -29,7 +30,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" >
     <head>
       <script
           src="https://telegram.org/js/telegram-web-app.js"
