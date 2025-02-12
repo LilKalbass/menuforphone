@@ -5,7 +5,7 @@ import {Footer} from "@/components/Footer";
 
 const ptSerif = PT_Serif({
   variable: "--font-pt-serif",
-  subsets: ["cyrillic"],
+  subsets: ["cyrillic", "latin"],
   weight: ["400", "700"]
 });
 

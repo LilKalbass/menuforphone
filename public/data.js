@@ -36,7 +36,7 @@ export const menuData = {
                 { ItemName: "Вишня Амарена", ItemImg: "/assets/garnish/CherryAmr.webp", ItemPrice: "50", ItemWeight: "1" },
                 { ItemName: "Бамбук", ItemImg: "/assets/garnish/Bamboo.webp", ItemPrice: "150", ItemWeight: "50" },
                 { ItemName: "Шпажки", ItemImg: "/assets/garnish/Skewers.webp", ItemPrice: "150", ItemWeight: "50" },
-                { ItemName: "Піна Мрія", ItemImg: "/assets/garnish/DreamFoam.webp", ItemPrice: "150", ItemWeight: "50" },
+                { ItemName: "Dream Foam", ItemImg: "/assets/garnish/DreamFoam.webp", ItemPrice: "150", ItemWeight: "50" },
                 { ItemName: "Перлина Кондитерська", ItemImg: "/assets/garnish/PerlCond.webp", ItemPrice: "150", ItemWeight: "50" },
                 { ItemName: "Пудра Малинова", ItemImg: "/assets/garnish/PydraMalin.webp", ItemPrice: "150", ItemWeight: "50" }
             ]
