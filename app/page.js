@@ -1,17 +1,7 @@
-'use client'
-
-import { useEffect } from "react";
 import Slider from "@/components/Slider";
 import Head from "next/head";
 
 export default function Home() {
-    useEffect(() => {
-        // Проверка, что объект Telegram WebApp доступен
-        if (window.Telegram && window.Telegram.WebApp) {
-            window.Telegram.WebApp.init();
-        }
-    }, []);
-
     return (
         <>
             <Head>
