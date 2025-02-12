@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { menuData } from "/public/data";
-import { LazyBackground } from "@/components/LazyBack";
+import { LazyBackground } from "../components/LazyBack";
 import { motion, AnimatePresence } from "framer-motion";
-import { fadeIn } from "@/public/variants";
-import { ItemPopup } from "@/components/PopUp";
+import { fadeIn } from "../public/variants";
+import { ItemPopup } from "../components/PopUp";
 
 export default function Slider() {
     const [activeTab, setActiveTab] = useState(menuData.Menu[0].Title.toLowerCase());

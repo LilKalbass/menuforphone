@@ -1,4 +1,4 @@
-import {FaTelegram, FaPhone} from "react-icons/fa6";
+import {FaTelegram} from "react-icons/fa6";
 
 export const Footer = () => {
     return (
