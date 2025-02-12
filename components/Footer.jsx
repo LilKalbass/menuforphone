@@ -1,5 +1,4 @@
-"use client";
-
+'use client'
 
 import {FaTelegram} from "react-icons/fa6";
 import {useEffect} from "react";
