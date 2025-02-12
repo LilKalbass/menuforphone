@@ -18,7 +18,7 @@ export const ItemPopup = ({ item, closePopup, categoryTitle }) => {
                 className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
                 onClick={closeLocalPopup}
             >
-                <div className="relative bg-white items-center flex justify-center flex-col p-4 rounded-lg shadow-lg" onClick={(e) => e.stopPropagation()}>
+                <div className="relative bg-white items-center flex justify-center flex-col p-4 min-h-[20%] rounded-lg shadow-lg" onClick={(e) => e.stopPropagation()}>
                     <button
                         className="absolute top-0 right-1 text-primary hover:text-gray-800"
                         onClick={closeLocalPopup}

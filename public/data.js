@@ -32,20 +32,20 @@ export const menuData = {
             Title: "Гарніш",
             BackgroundImage: "/assets/bg/garnishBg.webp",
             ListItems: [
-                { ItemName: "Прищіпки", ItemImg: "/assets/garnish/Clothespins.webp", ItemPrice: "50", ItemWeight: "1" },
-                { ItemName: "Вишня Амарена", ItemImg: "/assets/garnish/CherryAmr.webp", ItemPrice: "50", ItemWeight: "1" },
-                { ItemName: "Бамбук", ItemImg: "/assets/garnish/Bamboo.webp", ItemPrice: "150", ItemWeight: "50" },
-                { ItemName: "Шпажки", ItemImg: "/assets/garnish/Skewers.webp", ItemPrice: "150", ItemWeight: "50" },
-                { ItemName: "Dream Foam", ItemImg: "/assets/garnish/DreamFoam.webp", ItemPrice: "150", ItemWeight: "50" },
+                { ItemName: "Прищіпки", ItemImg: "/assets/garnish/Clothespins.webp", ItemPrice: "130", ItemWeight: "100ш." },
+                { ItemName: "Вишня Амарена", ItemImg: "/assets/garnish/CherryAmr.webp", ItemPrice: "500", ItemWeight: "1кг." },
+                { ItemName: "Бамбук", ItemImg: "/assets/garnish/Bamboo.webp", ItemPrice: "240", ItemWeight: "100ш." },
+                { ItemName: "Шпажки", ItemImg: "/assets/garnish/Skewers.webp", ItemPrice: "140", ItemWeight: "100ш." },
+                { ItemName: "Dream Foam", ItemImg: "/assets/garnish/DreamFoam.webp", ItemPrice: "800", ItemWeight: "100мл." },
                 { ItemName: "Перлина Кондитерська", ItemImg: "/assets/garnish/PerlCond.webp", ItemPrice: "80", ItemWeight: "25г." },
-                { ItemName: "Пудра Малинова", ItemImg: "/assets/garnish/PydraMalin.webp", ItemPrice: "150", ItemWeight: "50" }
+                { ItemName: "Пудра Малинова", ItemImg: "/assets/garnish/PydraMalin.webp", ItemPrice: "210", ItemWeight: "100г." }
             ]
         },
         {
             Title: "Сиропи",
             BackgroundImage: "/assets/bg/syropBg.webp",
             ListItems: [
-                { ItemName: "-----", ItemImg: "/assets/syrops/Lavender.webp", ItemPrice: "", ItemWeight: "" },
+                { ItemName: "Сироп Троянди", ItemImg: "/assets/syrops/Lavender.webp", ItemPrice: "150", ItemWeight: "1л." },
                 { ItemName: "-----", ItemImg: "/assets/syrops/Lavender.webp", ItemPrice: "", ItemWeight: "" },
             ]
         }
