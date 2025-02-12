@@ -18,12 +18,6 @@ export default function Slider() {
         });
     }, []);
 
-    useEffect(() => {
-        if (window.Telegram && window.Telegram.WebApp) {
-            window.Telegram.WebApp.init();
-        }
-    }, []);
-
     const isValidItem = (item) => {
         const isEmptyName = !item.ItemName || item.ItemName.trim().replace(/[-_\s]/g, "").length === 0;
         const isEmptyPriceAndWeight = !item.ItemPrice && !item.ItemWeight;
