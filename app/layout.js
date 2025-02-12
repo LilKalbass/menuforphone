@@ -29,18 +29,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const [isTelegramWebApp, setIsTelegramWebApp] = useState(false);
-
-  useEffect(() => {
-    if (typeof window !== "undefined" && window.Telegram?.WebApp) {
-      setIsTelegramWebApp(true);
-      window.Telegram.WebApp.init();
-    }
-  }, []);
-
-  if (!isTelegramWebApp) {
-    return <p>Пожалуйста, откройте приложение в Telegram WebApp</p>;
-  }
   return (
     <html lang="en">
     <Head>
