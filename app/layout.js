@@ -39,9 +39,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${ptSerif.variable} ${forum.variable} ${exo.variable} antialiased transition-all`}
       >
-        <Header/>
         {children}
-        <Footer/>
       </body>
     </html>
   );
