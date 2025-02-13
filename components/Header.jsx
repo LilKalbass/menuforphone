@@ -4,7 +4,7 @@ export const Header = () => {
     return (
         <header className="flex flex-col absolute inset-0">
             <div className="container mx-auto h-full flex items-start justify-center">
-                <div className="md:w-2/5 z-50 md:z-0 flex flex-col items-center">
+                <div className="md:w-2/5 z-50 flex flex-col items-center">
                     <Image
                         src="/assets/Logo.svg"
                         style={{
