@@ -17,7 +17,7 @@ export const Header = () => {
                         alt="logo_img"
                         className="object-contain"
                     />
-                    <h2 className="text-[16px] text-center text-primary">ВНИМАНИЕ!!!!!! <br/> ИДЕТ ОБСТРЕЛ ФЕКАЛЬЯМИ, ПРИГНИСЬ!!!</h2>
+                    <h2 className="text-[16px] text-center text-primary">ВНИМАНИЕ!!!!!! <br/> ИДЕТ ОБСТРЕЛ ФEКАЛИЯМИ, ПРИГНИСЬ!!!</h2>
                 </div>
             </div>
         </header>
