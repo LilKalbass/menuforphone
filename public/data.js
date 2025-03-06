@@ -20,25 +20,25 @@ export const menuData = {
             Title: "Квіти",
             BackgroundImage: "/assets/bgg.jpg",
             ListItems: [
-                { ItemName: "Лаванда", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "150", ItemWeight: "100ш." },
-                { ItemName: "Геліхрізум", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "150", ItemWeight: "50ш." },
-                { ItemName: "Гіпсофіла", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "110", ItemWeight: "1ш." },
-                { ItemName: "Гортензія", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "150", ItemWeight: "1ш." },
-                { ItemName: "Гомфрена", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "70", ItemWeight: "30ш." },
-                { ItemName: "Чайна Роза", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "100", ItemWeight: "30ш." }
+                { ItemName: "Лаванда", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "150", ItemWeight: "100ш." },
+                { ItemName: "Геліхрізум", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "150", ItemWeight: "50ш." },
+                { ItemName: "Гіпсофіла", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "110", ItemWeight: "1ш." },
+                { ItemName: "Гортензія", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "150", ItemWeight: "1ш." },
+                { ItemName: "Гомфрена", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "70", ItemWeight: "30ш." },
+                { ItemName: "Чайна Роза", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "100", ItemWeight: "30ш." }
             ]
         },
         {
             Title: "Гарніш",
             BackgroundImage: "/assets/bggg.jpg",
             ListItems: [
-                { ItemName: "Прищіпки", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "130", ItemWeight: "100ш." },
-                { ItemName: "Вишня Амарена", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "500", ItemWeight: "1кг." },
-                { ItemName: "Бамбук", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "240", ItemWeight: "100ш." },
-                { ItemName: "Шпажки", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "140", ItemWeight: "100ш." },
-                { ItemName: "Dream Foam", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "800", ItemWeight: "100мл." },
-                { ItemName: "Перлина Кондитерська", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "80", ItemWeight: "25г." },
-                { ItemName: "Пудра Малинова", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "210", ItemWeight: "100г." }
+                { ItemName: "Прищіпки", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "130", ItemWeight: "100ш." },
+                { ItemName: "Вишня Амарена", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "500", ItemWeight: "1кг." },
+                { ItemName: "Бамбук", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "240", ItemWeight: "100ш." },
+                { ItemName: "Шпажки", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "140", ItemWeight: "100ш." },
+                { ItemName: "Dream Foam", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "800", ItemWeight: "100мл." },
+                { ItemName: "Перлина Кондитерська", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "80", ItemWeight: "25г." },
+                { ItemName: "Пудра Малинова", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "210", ItemWeight: "100г." }
             ]
         },
         {
