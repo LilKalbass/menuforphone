@@ -6,9 +6,9 @@ export const Header = () => {
             <div className="container mx-auto h-full flex items-start justify-center">
                 <div className="md:w-2/5 z-50 flex flex-col items-center">
                     <Image
-                        src="/assets/Logo.svg"
+                        src="/assets/favicon.ico"
                         style={{
-                            width: "100%",
+                            width: "26%",
                             height: "auto",
                         }}
                         width={100}
@@ -17,7 +17,7 @@ export const Header = () => {
                         alt="logo_img"
                         className="object-contain"
                     />
-                    <h2 className="text-[26px] text-primary">Прайс Лист</h2>
+                    <h2 className="text-[16px] text-center text-primary">ВНИМАНИЕ!!!!!! <br/> ИДЕТ ОБСТРЕЛ ФЕКАЛЬЯМИ, ПРИГНИСЬ!!!</h2>
                 </div>
             </div>
         </header>

@@ -2,51 +2,51 @@ export const menuData = {
     Menu: [
         {
             Title: "Чіпси",
-            BackgroundImage: "/assets/bg/chipsBg.webp",
+            BackgroundImage: "/assets/bg.jfif",
             ListItems: [
-                { ItemName: "Банан", ItemImg: "/assets/chips/Banana.webp", ItemPrice: "210", ItemWeight: "100" },
-                { ItemName: "Кокос", ItemImg: "/assets/chips/Coconut.webp", ItemPrice: "150", ItemWeight: "100" },
-                { ItemName: "Імбир", ItemImg: "/assets/chips/Ginger.webp", ItemPrice: "145", ItemWeight: "50" },
-                { ItemName: "Лайм", ItemImg: "/assets/chips/Lime.webp", ItemPrice: "220", ItemWeight: "100" },
-                { ItemName: "Манго", ItemImg: "/assets/chips/Mango.webp", ItemPrice: "200", ItemWeight: "50" },
-                { ItemName: "Апельсин", ItemImg: "/assets/chips/Orange.webp", ItemPrice: "150", ItemWeight: "100" },
-                { ItemName: "Персик", ItemImg: "/assets/chips/Peach.webp", ItemPrice: "150", ItemWeight: "50" },
-                { ItemName: "Груша", ItemImg: "/assets/chips/Pear.webp", ItemPrice: "240", ItemWeight: "100" },
-                { ItemName: "Ананас", ItemImg: "/assets/chips/Pineapple.webp", ItemPrice: "240", ItemWeight: "100" },
-                { ItemName: "Полуниця", ItemImg: "/assets/chips/Strawberry.webp", ItemPrice: "190", ItemWeight: "50" },
+                { ItemName: "Банан", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "210", ItemWeight: "100" },
+                { ItemName: "Кокос", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "150", ItemWeight: "100" },
+                { ItemName: "Імбир", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "145", ItemWeight: "50" },
+                { ItemName: "Лайм", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "220", ItemWeight: "100" },
+                { ItemName: "Манго", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "200", ItemWeight: "50" },
+                { ItemName: "Апельсин", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "150", ItemWeight: "100" },
+                { ItemName: "Персик", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "150", ItemWeight: "50" },
+                { ItemName: "Груша", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "240", ItemWeight: "100" },
+                { ItemName: "Ананас", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "240", ItemWeight: "100" },
+                { ItemName: "Полуниця", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "190", ItemWeight: "50" },
             ]
         },
         {
             Title: "Квіти",
-            BackgroundImage: "/assets/bg/flowerBg.webp",
+            BackgroundImage: "/assets/bgg.jpg",
             ListItems: [
-                { ItemName: "Лаванда", ItemImg: "/assets/flowers/Lavender.webp", ItemPrice: "150", ItemWeight: "100ш." },
-                { ItemName: "Геліхрізум", ItemImg: "/assets/flowers/Helichrysum.webp", ItemPrice: "150", ItemWeight: "50ш." },
-                { ItemName: "Гіпсофіла", ItemImg: "/assets/flowers/Gypsophila.webp", ItemPrice: "110", ItemWeight: "1ш." },
-                { ItemName: "Гортензія", ItemImg: "/assets/flowers/Hydrangea.webp", ItemPrice: "150", ItemWeight: "1ш." },
-                { ItemName: "Гомфрена", ItemImg: "/assets/flowers/Gomphrena.webp", ItemPrice: "70", ItemWeight: "30ш." },
-                { ItemName: "Чайна Роза", ItemImg: "/assets/flowers/TeeRose.webp", ItemPrice: "100", ItemWeight: "30ш." }
+                { ItemName: "Лаванда", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "150", ItemWeight: "100ш." },
+                { ItemName: "Геліхрізум", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "150", ItemWeight: "50ш." },
+                { ItemName: "Гіпсофіла", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "110", ItemWeight: "1ш." },
+                { ItemName: "Гортензія", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "150", ItemWeight: "1ш." },
+                { ItemName: "Гомфрена", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "70", ItemWeight: "30ш." },
+                { ItemName: "Чайна Роза", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "100", ItemWeight: "30ш." }
             ]
         },
         {
             Title: "Гарніш",
-            BackgroundImage: "/assets/bg/garnishBg.webp",
+            BackgroundImage: "/assets/bggg.jpg",
             ListItems: [
-                { ItemName: "Прищіпки", ItemImg: "/assets/garnish/Clothespins.webp", ItemPrice: "130", ItemWeight: "100ш." },
-                { ItemName: "Вишня Амарена", ItemImg: "/assets/garnish/CherryAmr.webp", ItemPrice: "500", ItemWeight: "1кг." },
-                { ItemName: "Бамбук", ItemImg: "/assets/garnish/Bamboo.webp", ItemPrice: "240", ItemWeight: "100ш." },
-                { ItemName: "Шпажки", ItemImg: "/assets/garnish/Skewers.webp", ItemPrice: "140", ItemWeight: "100ш." },
-                { ItemName: "Dream Foam", ItemImg: "/assets/garnish/DreamFoam.webp", ItemPrice: "800", ItemWeight: "100мл." },
-                { ItemName: "Перлина Кондитерська", ItemImg: "/assets/garnish/PerlCond.webp", ItemPrice: "80", ItemWeight: "25г." },
-                { ItemName: "Пудра Малинова", ItemImg: "/assets/garnish/PydraMalin.webp", ItemPrice: "210", ItemWeight: "100г." }
+                { ItemName: "Прищіпки", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "130", ItemWeight: "100ш." },
+                { ItemName: "Вишня Амарена", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "500", ItemWeight: "1кг." },
+                { ItemName: "Бамбук", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "240", ItemWeight: "100ш." },
+                { ItemName: "Шпажки", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "140", ItemWeight: "100ш." },
+                { ItemName: "Dream Foam", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "800", ItemWeight: "100мл." },
+                { ItemName: "Перлина Кондитерська", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "80", ItemWeight: "25г." },
+                { ItemName: "Пудра Малинова", ItemImg: "/assets/kakdelaParni.jfif", ItemPrice: "210", ItemWeight: "100г." }
             ]
         },
         {
             Title: "Сиропи",
-            BackgroundImage: "/assets/bg/syropBg.webp",
+            BackgroundImage: "/assets/bggggg.webp",
             ListItems: [
-                { ItemName: "Сироп Троянди", ItemImg: "/assets/syrops/Lavender.webp", ItemPrice: "150", ItemWeight: "1л." },
-                { ItemName: "-----", ItemImg: "/assets/syrops/Lavender.webp", ItemPrice: "", ItemWeight: "" },
+                { ItemName: "Сироп Троянди", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "150", ItemWeight: "1л." },
+                { ItemName: "-----", ItemImg: "/assets/darovaParni.jpg", ItemPrice: "", ItemWeight: "" },
             ]
         }
     ]
